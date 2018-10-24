@@ -5,7 +5,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   // tslint:disable-next-line:component-selector
   selector: 'editable',
   template: `
-        <div #container [ngStyle]="styles" [innerHTML]="contentValue" (input)="setContent($event)" contenteditable="true"></div>
+        <div [ngStyle]="styles" [innerHTML]="contentValue" (input)="setContent($event)" contenteditable="true"></div>
     `,
   styles: [],
   providers: [
@@ -17,8 +17,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ]
 })
 export class ContentEditableComponent
-  implements ControlValueAccessor, OnChanges {
-  @ViewChild('container') container;
+  implements ControlValueAccessor {
   private _styles: any;
   private _contentValue: any;
 

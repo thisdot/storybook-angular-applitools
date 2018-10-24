@@ -3,6 +3,7 @@ import { Component, SimpleChange, OnChanges, SimpleChanges } from "@angular/core
 @Component({
   selector: "app-root",
   template: `
+  <div class="container">
     <section class="section">
       <h2>Inside a Template Driven Forms</h2>
       <form #form="ngForm">
@@ -26,9 +27,13 @@ import { Component, SimpleChange, OnChanges, SimpleChanges } from "@angular/core
       <editable name="editable2" [styles]="styles()" [(ngModel)]="content1"></editable>
       <pre>{{ content1 | json }}</pre>
     </section>
+  </div>
   `,
   styles: [
-    `
+    ` .container {
+        margin: 40px auto;
+      }
+
       .section {
         margin: 40px auto 0 auto;
         max-width: 800px;
@@ -59,7 +64,7 @@ import { Component, SimpleChange, OnChanges, SimpleChanges } from "@angular/core
 })
 export class AppComponent implements OnChanges {
   content = "Content";
-  content1 = "Content 1";
+  content1 = "This is an editable section";
 
   styles() {
     return {
