@@ -6,62 +6,55 @@ import { linkTo } from '@storybook/addon-links';
 import { Welcome, Button } from '@storybook/angular/demo';
 import { ContentEditableComponent } from './../app/components/contenteditable.component';
 
-storiesOf('ContentEditableComponent', module)
+storiesOf('ContentEditable Component', module)
   .add(
-    'editable content',
-    withNotes('')(() => ({
+    'with yellow background',
+    withNotes('Testing the background color for the editable area and setting it to yellow')(() => ({
       component: ContentEditableComponent,
       props: {
-        styles: { 'background-color': 'yellow' },
+        styles: { 'background-color': 'yellow', 'padding': '20px' },
         ngModel: 'The content goes here',
         ngModelChange: action('ngModelChange')
       }
     }))
   )
   .add(
-    'red background',
-    withNotes('')(() => ({
+    'with red background',
+    withNotes('Testing the background color for the editable area by setting it to red')(() => ({
       component: ContentEditableComponent,
       props: {
-        styles: { 'background-color': 'red' },
+        styles: { 'background-color': 'red', 'padding': '20px' },
         ngModel: 'The content goes here',
         ngModelChange: action('ngModelChange')
       }
     }))
-  );
-
-
-storiesOf('Button', module)
-  .add('with text', () => ({
-    component: Button,
-    props: {
-      text: 'Hello Button',
-    },
-  }))
-  .add(
-    'with some emoji',
-    withNotes({ text: 'My notes on a button with emojis' })(() => ({
-      component: Button,
-      props: {
-        text: '😀 😎 👍 💯',
-      },
-    }))
   )
   .add(
-    'with some emoji and action',
-    withNotes({ text: 'My notes on a button with emojis' })(() => ({
-      component: Button,
+    'with blue background and margin-top 50px',
+    withNotes('Testing the background color and margin-top for the editable area by setting it to blue with margin-top of 50px')(() => ({
+      component: ContentEditableComponent,
       props: {
-        text: '😀 😎 👍 💯',
-        onClick: action('This was clicked OMG'),
-      },
+        styles: {
+          'background-color': 'blue',
+          'color': '#fff',
+          'padding': '20px',
+          'margin-top': '50px'
+        },
+        ngModel: 'The content goes here',
+        ngModelChange: action('ngModelChange')
+      }
+    }))
+  ).add(
+    'with html content',
+    withNotes('Testing the content passed to the component by including HTML elements in the content')(() => ({
+      component: ContentEditableComponent,
+      props: {
+        styles: {
+          'background-color': '#eee',
+          padding: '20px',
+        },
+        ngModel: '<h1>Header 1</h1>',
+        ngModelChange: action('ngModelChange')
+      }
     }))
   );
-
-storiesOf('Another Button', module).add('button with link to another story', () => ({
-  component: Button,
-  props: {
-    text: 'Go to Welcome Story',
-    onClick: linkTo('Welcome'),
-  },
-}));
