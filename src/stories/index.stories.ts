@@ -35,7 +35,7 @@ storiesOf('ContentEditable Component', module)
       component: ContentEditableComponent,
       props: {
         styles: {
-          'background-color': 'blue',
+          'background-color': 'green',
           'color': '#fff',
           'padding': '20px',
           'margin-top': '50px'

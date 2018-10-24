@@ -1,5 +1,19 @@
 {
   "name": "storybook-angular-applitools",
+  "author": {
+    "name": "Bilal Haidar"
+  },
+  "description": "A sample code demonstrating how to use Storybook together with Angular and Applitools",
+  "keywords": [
+    "applitools",
+    "angular",
+    "storybook",
+    "angular-in-depth",
+    "javascript"
+  ],
+  "repository": {
+    "url": "https://github.com/bhaidar/storybook-angular-applitools.git"
+  },
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -9,7 +23,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "eyes-storybook": "eyes-storybook"
   },
   "private": true,
   "dependencies": {
@@ -32,6 +47,7 @@
     "@angular/cli": "~7.0.2",
     "@angular/compiler-cli": "~7.0.0",
     "@angular/language-service": "~7.0.0",
+    "@applitools/eyes.storybook": "^2.1.9",
     "@babel/core": "^7.1.2",
     "@storybook/addon-actions": "^4.0.0-alpha.25",
     "@storybook/addon-links": "^4.0.0-alpha.25",
