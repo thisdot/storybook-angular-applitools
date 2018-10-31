@@ -7,7 +7,7 @@ import { Component, SimpleChange, OnChanges, SimpleChanges } from "@angular/core
 })
 export class AppComponent implements OnChanges {
   content = "Content";
-  content1 = "Content 1";
+  content1 = "This is an editable section";
 
   styles() {
     return {
