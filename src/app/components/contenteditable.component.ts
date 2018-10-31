@@ -1,20 +1,20 @@
-import { Component, Input, forwardRef, OnChanges, SimpleChanges, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, forwardRef, OnChanges, SimpleChanges, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'editable',
-  template: `
-        <div #container [ngStyle]="styles" [innerHTML]="contentValue" (input)="setContent($event)" contenteditable="true"></div>
-    `,
+  templateUrl: `./contenteditable.component.html`,
   styles: [],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => ContentEditableComponent),
       multi: true
     }
-  ]
+  ],
+  
 })
 export class ContentEditableComponent
   implements ControlValueAccessor, OnChanges {
