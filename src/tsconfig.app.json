@@ -8,6 +8,7 @@
     "test.ts",
     "**/*.spec.ts",
     "stories",
-    "stores/*.ts"
+    "stores/*.ts",
+    "**/*.stories.ts"
   ]
 }

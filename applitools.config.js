@@ -1,3 +1,3 @@
 module.exports = {
-    showLogs: true
+    showLogs: false
 }
