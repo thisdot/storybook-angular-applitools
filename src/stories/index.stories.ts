@@ -9,7 +9,7 @@ storiesOf('ContentEditable Component', module)
     withNotes('Testing the background color for the editable area and setting it to yellow')(() => ({
       component: ContentEditableComponent,
       props: {
-        styles: { 'background-color': 'yellow', 'padding': '20px' },
+        styles: { 'background-color': 'yellow', 'padding': '25px' },
         ngModel: 'The content goes here',
         ngModelChange: action('ngModelChange')
       }
