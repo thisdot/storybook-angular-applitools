@@ -14,18 +14,18 @@ storiesOf('ContentEditable Component', module)
         ngModelChange: action('ngModelChange')
       }
     }))
-  )
-  .add(
-    'with red background',
-    withNotes('Testing the background color for the editable area by setting it to red')(() => ({
-      component: ContentEditableComponent,
-      props: {
-        styles: { 'background-color': 'red', 'color': '#fff', 'padding': '20px' },
-        ngModel: 'The content goes here',
-        ngModelChange: action('ngModelChange')
-      }
-    }))
   );
+  // .add(
+  //   'with red background',
+  //   withNotes('Testing the background color for the editable area by setting it to red')(() => ({
+  //     component: ContentEditableComponent,
+  //     props: {
+  //       styles: { 'background-color': 'red', 'color': '#fff', 'padding': '20px' },
+  //       ngModel: 'The content goes here',
+  //       ngModelChange: action('ngModelChange')
+  //     }
+  //   }))
+  // );
   // .add(
   //   'with blue background and margin-top 50px',
   //   withNotes('Testing the background color and margin-top for the editable area by setting it to blue with margin-top of 50px')(() => ({
