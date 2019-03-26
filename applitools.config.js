@@ -2,6 +2,7 @@ module.exports = {
   appName: "ContentEditable App",
   batchName: "Testing by combination of configurations",
   showLogs: false,
+  concurrency: 100,
   storybookPort: "6006",
   browser: [
     { width: 1280, height: 800, name: "firefox" },
@@ -104,6 +105,6 @@ module.exports = {
     { width: 2560, height: 1700, name: "chrome" },
     { width: 2560, height: 1800, name: "chrome" },
     { width: 2880, height: 1620, name: "chrome" },
-    { width: 2560, height: 1920, name: "chrome" }
+    { width: 2560, height: 1920, name: "chrome" },
   ]
 };
