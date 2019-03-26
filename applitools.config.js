@@ -3,7 +3,6 @@ module.exports = {
   batchName: "Testing by combination of configurations",
   showLogs: false,
   concurrency: 100,
-  storybookPort: "6006",
   browser: [
     { width: 1280, height: 800, name: "firefox" },
     { width: 1152, height: 900, name: "firefox" },
